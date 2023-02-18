@@ -1,0 +1,16 @@
+server:
+  port: 7000  
+spring:
+  banner:
+    location: classpath:banner/banner.txt    
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: https://github.com/Microservices-Projects-2023/config_server
+          search-paths: config-data
+    
+    

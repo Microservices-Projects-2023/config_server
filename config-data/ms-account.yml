@@ -1,0 +1,7 @@
+server:
+    port: ${PORT:${SERVER_PORT:0}}
+spring:
+  data:
+    mongodb:
+      uri: mongodb+srv://jrocha:Vr4n0*2023@cluster0.bc20x6f.mongodb.net/banco?retryWrites=true&w=majority
+
