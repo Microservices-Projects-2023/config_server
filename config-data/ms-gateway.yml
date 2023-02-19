@@ -1,0 +1,29 @@
+spring:
+  cloud:
+    gateway:
+      routes[0]:
+        id: ms-account
+        predicates: Path=/api/v1/account/**
+        filters: StripPrefix=3
+        uri: lb://ms-account
+      routes[1]:
+        id: ms-costumer
+        predicates: Path=/api/v1/costumer/**
+        filters: StripPrefix=3
+        uri: lb://ms-costumer
+      routes[2]:
+        id: ms-product
+        predicates: Path=/api/v1/product/**
+        filters: StripPrefix=3
+        uri: lb://ms-product    
+      discovery:
+        locator:
+          enabled: 'true'
+    loadbalancer:
+      ribbon:
+        enabled: 'false'
+  application:
+    name: ms-gateway
+
+server:
+  port: '8090'
