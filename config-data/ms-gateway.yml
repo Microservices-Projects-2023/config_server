@@ -9,7 +9,8 @@ spring:
       routes[1]:
         id: ms-costumer
         predicates: Path=/api/v1/costumer/**
-        filters: StripPrefix=3     
+        filters: StripPrefix=3
+        uri: //ms-product        
       routes[2]:
         id: ms-product
         predicates: Path=/api/v1/product/**
