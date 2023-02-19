@@ -10,7 +10,8 @@ spring:
       server:
         git:
           default-label: main
-          uri: https://github.com/Microservices-Projects-2023/config_server.git
+          uri: D:\04 java\Proyectos\config-server
           search-paths: config-data
+        bootstrap: true
     
     
