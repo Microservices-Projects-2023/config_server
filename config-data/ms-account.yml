@@ -4,3 +4,13 @@ spring:
   data:
     mongodb:
       uri: mongodb+srv://jrocha:Vr4n0*2023@cluster0.bc20x6f.mongodb.net/banco?retryWrites=true&w=majority
+eureka:
+  client:
+    fetch-registry: 'true'
+    register-with-eureka: 'true'
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    service-url:
+      default-zone: http://localhost:8761/eureka
+
+ 
